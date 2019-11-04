@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
   declarations: [NavigationComponent],
   imports: [
     CommonModule,
+    RouterModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
