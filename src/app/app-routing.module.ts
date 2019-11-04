@@ -4,9 +4,9 @@ import { AUTH_ROUTES } from './auth/auth-routing.module';
 import { AuthGuard } from './auth/auth.guard';
 
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), canActivate: [AuthGuard] },
+  { path: 'home', loadChildren: './home/home.module#HomeModule', canActivate: [AuthGuard] },
   { path: 'auth', children: AUTH_ROUTES }
 ];
 
