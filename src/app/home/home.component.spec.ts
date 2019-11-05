@@ -1,16 +1,24 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { CustomerService } from '../customers/customer.service';
+import { EMPTY } from 'rxjs';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
   beforeEach(async(() => {
+    const customerServiceMock = jasmine.createSpyObj<CustomerService>('CustomerService', ['getCustomerOfTheDay']);
+    customerServiceMock.getCustomerOfTheDay.and.returnValue(EMPTY);
+
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ]
+      declarations: [HomeComponent],
+      providers: [
+        { provide: CustomerService, useValue: customerServiceMock }
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -17,6 +17,7 @@ import { MatSortModule } from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule
-  ]
+  ],
+  exports: [CustomerListComponent]
 })
 export class CustomersModule { }
