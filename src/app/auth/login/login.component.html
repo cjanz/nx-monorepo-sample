@@ -1,10 +1,6 @@
 <h1>Login</h1>
 
-<mat-card *ngIf="error">
-  <div class="error">
-    <mat-icon>error</mat-icon><span>{{error}}</span>
-  </div>
-</mat-card>
+<app-info-box *ngIf="error" [icon]="'error'" [message]="error"></app-info-box>
 
 <form class="example-form" [formGroup]="form" (submit)="onSubmit()">
   <mat-form-field>

@@ -9,17 +9,7 @@ form {
   max-width: 250px;
 }
 
-mat-card {
+app-info-box {
   margin-bottom: 2rem;
-}
-
-.error {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-
-  span {
-    margin-left: 1rem;
-  }
 }
 
