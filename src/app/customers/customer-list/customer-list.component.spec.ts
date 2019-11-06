@@ -35,4 +35,13 @@ describe('CustomerListComponent', () => {
   it('should compile', () => {
     expect(component).toBeTruthy();
   });
+
+  new Array(100).fill('Test').fill('Test', 0, 1000).forEach(() => {
+
+    it('should be a good test', (done) => {
+      expect(true).toBe(true);
+      setTimeout(() => done(), 100);
+    });
+
+  });
 });
