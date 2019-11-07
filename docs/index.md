@@ -8,4 +8,4 @@ This app shows the process of refactoring an Angular app to a monorepo with the 
 
 # Slides
 
-The slides for the corresponding sessions of these samples can be found here: [Slides](./scalable_angular_architecture _with_nx.pdf).
+The slides for the corresponding sessions of these samples can be found here: [Slides](./scalable_angular_architecture_with_nx.pdf).
