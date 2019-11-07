@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { LoginComponent } from './login.component';
 import { AuthService } from '../auth.service';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
