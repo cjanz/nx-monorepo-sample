@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { User, AuthService } from '../../auth/auth.service';
+import { User, AuthService } from '../../../../../../apps/ng-cli-app/src/app/auth/auth.service';
 
 @Component({
   selector: 'app-navigation',

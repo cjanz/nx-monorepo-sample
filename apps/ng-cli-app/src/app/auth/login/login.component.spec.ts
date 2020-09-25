@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { LoginComponent } from './login.component';
 import { AuthService } from '../auth.service';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedComponentsModule } from '@ng-cli-app/shared/components';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -19,7 +19,7 @@ describe('LoginComponent', () => {
       TestBed.configureTestingModule({
         imports: [
           NoopAnimationsModule,
-          SharedModule,
+          SharedComponentsModule,
           MatInputModule,
           MatButtonModule,
           ReactiveFormsModule,

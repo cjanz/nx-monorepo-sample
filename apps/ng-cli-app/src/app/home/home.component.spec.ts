@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import { CustomerService } from '../customers/customer.service';
 import { EMPTY } from 'rxjs';
-import { SharedModule } from '../shared/shared.module';
+import { SharedComponentsModule } from '@ng-cli-app/shared/components';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -18,7 +18,7 @@ describe('HomeComponent', () => {
       customerServiceMock.getCustomerOfTheDay.and.returnValue(EMPTY);
 
       TestBed.configureTestingModule({
-        imports: [SharedModule],
+        imports: [SharedComponentsModule],
         declarations: [HomeComponent],
         providers: [
           { provide: CustomerService, useValue: customerServiceMock },
