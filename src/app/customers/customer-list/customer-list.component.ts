@@ -13,9 +13,9 @@ import { Customer } from '../customer.model';
 })
 export class CustomerListComponent implements AfterViewInit, OnInit {
 
-  @ViewChild(MatPaginator, { static: false }) paginator: MatPaginator;
-  @ViewChild(MatSort, { static: false }) sort: MatSort;
-  @ViewChild(MatTable, { static: false }) table: MatTable<Customer>;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatTable) table: MatTable<Customer>;
 
   dataSource: CustomerListDataSource;
 

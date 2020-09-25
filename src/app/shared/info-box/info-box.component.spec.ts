@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { InfoBoxComponent } from './info-box.component';
 import { MatCardModule } from '@angular/material/card';
@@ -8,7 +8,7 @@ describe('InfoBoxComponent', () => {
   let component: InfoBoxComponent;
   let fixture: ComponentFixture<InfoBoxComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         MatCardModule,

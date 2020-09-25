@@ -7,8 +7,8 @@ import { AuthGuard } from './auth/auth.guard';
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: 'auth', children: AUTH_ROUTES },
-  { path: 'home', loadChildren: './home/home.module#HomeModule', canActivate: [AuthGuard] },
-  { path: 'customers', loadChildren: './customers/customers.module#CustomersModule', canActivate: [AuthGuard] }
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule), canActivate: [AuthGuard] },
+  { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule), canActivate: [AuthGuard] }
 ];
 
 @NgModule({
