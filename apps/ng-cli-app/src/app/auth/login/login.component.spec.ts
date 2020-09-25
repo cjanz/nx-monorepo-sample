@@ -14,24 +14,30 @@ describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        NoopAnimationsModule,
-        SharedModule,
-        MatInputModule,
-        MatButtonModule,
-        ReactiveFormsModule,
-        MatCardModule,
-        MatIconModule,
-      ],
-      declarations: [LoginComponent],
-      providers: [
-        { provide: AuthService, useValue: jasmine.createSpyObj<AuthService>('AuthService', ['logout']) }
-      ]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [
+          NoopAnimationsModule,
+          SharedModule,
+          MatInputModule,
+          MatButtonModule,
+          ReactiveFormsModule,
+          MatCardModule,
+          MatIconModule,
+        ],
+        declarations: [LoginComponent],
+        providers: [
+          {
+            provide: AuthService,
+            useValue: jasmine.createSpyObj<AuthService>('AuthService', [
+              'logout',
+            ]),
+          },
+        ],
+      }).compileComponents();
     })
-      .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);

@@ -4,17 +4,16 @@ import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-
   private userSubject: BehaviorSubject<User> = new BehaviorSubject(null);
 
   public currentUser$ = this.userSubject.asObservable();
 
-  public isAuthenticated$ = this.currentUser$.pipe(map(user => !!user));
+  public isAuthenticated$ = this.currentUser$.pipe(map((user) => !!user));
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   public login(username: string, password: string): Observable<User> {
     if ('test' === username) {

@@ -14,23 +14,30 @@ describe('NavigationComponent', () => {
   let component: NavigationComponent;
   let fixture: ComponentFixture<NavigationComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [NavigationComponent],
-      imports: [
-        NoopAnimationsModule,
-        LayoutModule,
-        MatButtonModule,
-        MatIconModule,
-        MatListModule,
-        MatSidenavModule,
-        MatToolbarModule,
-      ],
-      providers: [
-        { provide: AuthService, useValue: jasmine.createSpyObj<AuthService>('AuthService', ['logout']) }
-      ]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [NavigationComponent],
+        imports: [
+          NoopAnimationsModule,
+          LayoutModule,
+          MatButtonModule,
+          MatIconModule,
+          MatListModule,
+          MatSidenavModule,
+          MatToolbarModule,
+        ],
+        providers: [
+          {
+            provide: AuthService,
+            useValue: jasmine.createSpyObj<AuthService>('AuthService', [
+              'logout',
+            ]),
+          },
+        ],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(NavigationComponent);

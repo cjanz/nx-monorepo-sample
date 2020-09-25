@@ -9,19 +9,23 @@ describe('HomeComponent', () => {
   let component: HomeComponent;
   let fixture: ComponentFixture<HomeComponent>;
 
-  beforeEach(waitForAsync(() => {
-    const customerServiceMock = jasmine.createSpyObj<CustomerService>('CustomerService', ['getCustomerOfTheDay']);
-    customerServiceMock.getCustomerOfTheDay.and.returnValue(EMPTY);
+  beforeEach(
+    waitForAsync(() => {
+      const customerServiceMock = jasmine.createSpyObj<CustomerService>(
+        'CustomerService',
+        ['getCustomerOfTheDay']
+      );
+      customerServiceMock.getCustomerOfTheDay.and.returnValue(EMPTY);
 
-    TestBed.configureTestingModule({
-      imports: [SharedModule],
-      declarations: [HomeComponent],
-      providers: [
-        { provide: CustomerService, useValue: customerServiceMock }
-      ]
+      TestBed.configureTestingModule({
+        imports: [SharedModule],
+        declarations: [HomeComponent],
+        providers: [
+          { provide: CustomerService, useValue: customerServiceMock },
+        ],
+      }).compileComponents();
     })
-      .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);

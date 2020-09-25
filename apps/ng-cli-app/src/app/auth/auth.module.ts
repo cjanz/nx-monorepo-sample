@@ -18,6 +18,6 @@ import { SharedModule } from '../shared/shared.module';
     ReactiveFormsModule,
     MatCardModule,
     MatIconModule,
-  ]
+  ],
 })
-export class AuthModule { }
+export class AuthModule {}

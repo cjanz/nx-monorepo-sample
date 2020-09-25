@@ -11,8 +11,6 @@ import { RouterModule } from '@angular/router';
 import { InfoBoxComponent } from './info-box/info-box.component';
 import { MatCardModule } from '@angular/material/card';
 
-
-
 @NgModule({
   declarations: [NavigationComponent, InfoBoxComponent],
   imports: [
@@ -24,8 +22,8 @@ import { MatCardModule } from '@angular/material/card';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
   ],
-  exports: [NavigationComponent, InfoBoxComponent]
+  exports: [NavigationComponent, InfoBoxComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -4,9 +4,11 @@ import { CustomerService } from './customer.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('CustomerService', () => {
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule]
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+    })
+  );
 
   it('should be created', () => {
     const service: CustomerService = TestBed.inject(CustomerService);

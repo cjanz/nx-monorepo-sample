@@ -8,16 +8,14 @@ describe('InfoBoxComponent', () => {
   let component: InfoBoxComponent;
   let fixture: ComponentFixture<InfoBoxComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [
-        MatCardModule,
-        MatIconModule
-      ],
-      declarations: [InfoBoxComponent]
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        imports: [MatCardModule, MatIconModule],
+        declarations: [InfoBoxComponent],
+      }).compileComponents();
     })
-      .compileComponents();
-  }));
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(InfoBoxComponent);

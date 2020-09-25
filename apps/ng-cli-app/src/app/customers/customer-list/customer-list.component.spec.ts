@@ -11,20 +11,20 @@ describe('CustomerListComponent', () => {
   let component: CustomerListComponent;
   let fixture: ComponentFixture<CustomerListComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [CustomerListComponent],
-      imports: [
-        NoopAnimationsModule,
-        MatPaginatorModule,
-        MatSortModule,
-        MatTableModule,
-      ],
-      providers: [
-        { provide: CustomerService, useValue: {} }
-      ]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [CustomerListComponent],
+        imports: [
+          NoopAnimationsModule,
+          MatPaginatorModule,
+          MatSortModule,
+          MatTableModule,
+        ],
+        providers: [{ provide: CustomerService, useValue: {} }],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CustomerListComponent);
@@ -36,12 +36,13 @@ describe('CustomerListComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  new Array(100).fill('Test').fill('Test', 0, 1000).forEach(() => {
-
-    it('should be a good test', (done) => {
-      expect(true).toBe(true);
-      setTimeout(() => done(), 100);
+  new Array(100)
+    .fill('Test')
+    .fill('Test', 0, 1000)
+    .forEach(() => {
+      it('should be a good test', (done) => {
+        expect(true).toBe(true);
+        setTimeout(() => done(), 100);
+      });
     });
-
-  });
 });

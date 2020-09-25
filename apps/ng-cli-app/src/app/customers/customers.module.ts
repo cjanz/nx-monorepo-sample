@@ -8,7 +8,6 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
-
 @NgModule({
   declarations: [CustomersComponent, CustomerListComponent],
   imports: [
@@ -16,8 +15,8 @@ import { MatSortModule } from '@angular/material/sort';
     CustomersRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
   ],
-  exports: [CustomerListComponent]
+  exports: [CustomerListComponent],
 })
-export class CustomersModule { }
+export class CustomersModule {}
