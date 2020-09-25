@@ -11,11 +11,9 @@ describe('HomeComponent', () => {
 
   beforeEach(
     waitForAsync(() => {
-      const customerServiceMock = jasmine.createSpyObj<CustomerService>(
-        'CustomerService',
-        ['getCustomerOfTheDay']
-      );
-      customerServiceMock.getCustomerOfTheDay.and.returnValue(EMPTY);
+      const customerServiceMock = {
+        getCustomerOfTheDay: () => EMPTY,
+      };
 
       TestBed.configureTestingModule({
         imports: [SharedComponentsModule],

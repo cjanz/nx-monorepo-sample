@@ -9,12 +9,16 @@ describe('AppComponent', () => {
   beforeEach(
     waitForAsync(() => {
       TestBed.configureTestingModule({
-        imports: [RouterTestingModule, NoopAnimationsModule, SharedComponentsModule],
+        imports: [
+          RouterTestingModule,
+          NoopAnimationsModule,
+          SharedComponentsModule,
+        ],
         declarations: [AppComponent],
         providers: [
           {
             provide: AuthService,
-            useValue: {}
+            useValue: {},
           },
         ],
       }).compileComponents();

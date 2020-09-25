@@ -7,7 +7,8 @@ export const routes: Routes = [
   { path: 'auth', children: AUTH_ROUTES },
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    loadChildren: () =>
+      import('@ng-cli-app/home/ui').then((m) => m.HomeUiModule),
     canActivate: [AuthGuard],
   },
   {

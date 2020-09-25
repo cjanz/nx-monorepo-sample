@@ -9,4 +9,4 @@ import { SharedComponentsModule } from '@ng-cli-app/shared/components';
   declarations: [HomeComponent],
   imports: [CommonModule, SharedComponentsModule, HomeRoutingModule],
 })
-export class HomeModule {}
+export class HomeUiModule {}

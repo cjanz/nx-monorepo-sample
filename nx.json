@@ -28,6 +28,9 @@
     },
     "customers-data": {
       "tags": []
+    },
+    "home-ui": {
+      "tags": []
     }
   }
 }

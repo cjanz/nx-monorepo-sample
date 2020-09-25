@@ -8,12 +8,9 @@ import { AuthService, User } from '@ng-cli-app/auth';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-
   public user$: Observable<User>;
 
-  constructor(
-    private authService: AuthService
-  ) { }
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.user$ = this.authService.currentUser$;
