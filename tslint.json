@@ -111,8 +111,45 @@
         "allow": [],
         "depConstraints": [
           {
-            "sourceTag": "*",
-            "onlyDependOnLibsWithTags": ["*"]
+            "sourceTag": "type:app",
+            "onlyDependOnLibsWithTags": ["type:ui", "type:data"]
+          },
+          {
+            "sourceTag": "type:ui",
+            "onlyDependOnLibsWithTags": ["type:ui", "type:data"]
+          },
+          {
+            "sourceTag": "type:data",
+            "onlyDependOnLibsWithTags": ["type:data"]
+          },
+          {
+            "sourceTag": "scope:app",
+            "onlyDependOnLibsWithTags": [
+              "scope:auth",
+              "scope:customers",
+              "scope:home",
+              "scope:shared"
+            ]
+          },
+          {
+            "sourceTag": "scope:auth",
+            "onlyDependOnLibsWithTags": ["scope:auth", "scope:shared"]
+          },
+          {
+            "sourceTag": "scope:shared",
+            "onlyDependOnLibsWithTags": ["scope:shared"]
+          },
+          {
+            "sourceTag": "scope:customers",
+            "onlyDependOnLibsWithTags": ["scope:customers", "scope:shared"]
+          },
+          {
+            "sourceTag": "scope:home",
+            "onlyDependOnLibsWithTags": [
+              "scope:home",
+              "scope:customers",
+              "scope:shared"
+            ]
           }
         ]
       }
