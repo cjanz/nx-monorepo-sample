@@ -32,5 +32,12 @@
     "home-ui": {
       "tags": ["scope:home", "type:ui"]
     }
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "options": {
+        "cacheableOperations": ["build", "test", "lint", "e2e"]
+      }
+    }
   }
 }
