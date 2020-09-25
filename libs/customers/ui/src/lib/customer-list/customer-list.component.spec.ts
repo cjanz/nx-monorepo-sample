@@ -5,7 +5,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 
 import { CustomerListComponent } from './customer-list.component';
-import { CustomerService } from '../customer.service';
+import { CustomerService } from '@ng-cli-app/customers/data';
 
 describe('CustomerListComponent', () => {
   let component: CustomerListComponent;

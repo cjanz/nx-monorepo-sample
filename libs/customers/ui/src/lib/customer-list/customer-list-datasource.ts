@@ -3,8 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, merge, Subscription, of } from 'rxjs';
-import { Customer } from '../customer.model';
-import { CustomerService } from '../customer.service';
+import { Customer, CustomerService } from '@ng-cli-app/customers/data';
 
 /**
  * Data source for the CustomerList view. This class should

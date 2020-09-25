@@ -3,8 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { CustomerListDataSource } from './customer-list-datasource';
-import { CustomerService } from '../customer.service';
-import { Customer } from '../customer.model';
+import { Customer, CustomerService } from '@ng-cli-app/customers/data';
 
 @Component({
   selector: 'app-customer-list',

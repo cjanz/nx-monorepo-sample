@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Customer, CustomerService } from '@ng-cli-app/customers/ui';
+import { Customer, CustomerService } from '@ng-cli-app/customers/data';
 import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 

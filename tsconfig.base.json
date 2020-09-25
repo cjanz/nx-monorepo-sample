@@ -17,7 +17,8 @@
     "paths": {
       "@ng-cli-app/shared/components": ["libs/shared/components/src/index.ts"],
       "@ng-cli-app/auth": ["libs/auth/src/index.ts"],
-      "@ng-cli-app/customers/ui": ["libs/customers/ui/src/index.ts"]
+      "@ng-cli-app/customers/ui": ["libs/customers/ui/src/index.ts"],
+      "@ng-cli-app/customers/data": ["libs/customers/data/src/index.ts"]
     },
     "rootDir": "."
   },
