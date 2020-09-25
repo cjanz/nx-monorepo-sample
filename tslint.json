@@ -130,8 +130,8 @@
       ]
     },
     "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true
-  ,    "variable-name": {
+    "use-pipe-transform-interface": true,
+    "variable-name": {
       "options": [
         "ban-keywords",
         "check-format",
@@ -147,9 +147,24 @@
         "check-type",
         "check-typecast"
       ]
-    }
-},
+    },
+    "nx-enforce-module-boundaries": [
+      true,
+      {
+        "allow": [],
+        "depConstraints": [
+          {
+            "sourceTag": "*",
+            "onlyDependOnLibsWithTags": [
+              "*"
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "rulesDirectory": [
-    "codelyzer"
+    "codelyzer",
+    "node_modules/@nrwl/workspace/src/tslint"
   ]
 }

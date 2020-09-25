@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "",
   "projects": {
     "ng-cli-app": {
       "projectType": "application",
@@ -10,26 +10,26 @@
           "style": "scss"
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "apps/ng-cli-app",
+      "sourceRoot": "apps/ng-cli-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-cli-app",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.app.json",
+            "outputPath": "dist/apps/ng-cli-app",
+            "index": "apps/ng-cli-app/src/index.html",
+            "main": "apps/ng-cli-app/src/main.ts",
+            "polyfills": "apps/ng-cli-app/src/polyfills.ts",
+            "tsConfig": "apps/ng-cli-app/tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/ng-cli-app/src/favicon.ico",
+              "apps/ng-cli-app/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "apps/ng-cli-app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -37,8 +37,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "replace": "apps/ng-cli-app/src/environments/environment.ts",
+                  "with": "apps/ng-cli-app/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -84,17 +84,17 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test.ts",
-            "polyfills": "src/polyfills.ts",
-            "tsConfig": "tsconfig.spec.json",
-            "karmaConfig": "karma.conf.js",
+            "main": "apps/ng-cli-app/src/test.ts",
+            "polyfills": "apps/ng-cli-app/src/polyfills.ts",
+            "tsConfig": "apps/ng-cli-app/tsconfig.spec.json",
+            "karmaConfig": "apps/ng-cli-app/karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "apps/ng-cli-app/src/favicon.ico",
+              "apps/ng-cli-app/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "apps/ng-cli-app/src/styles.scss"
             ],
             "scripts": []
           }
@@ -103,25 +103,39 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
+              "apps/ng-cli-app/tsconfig.app.json",
+              "apps/ng-cli-app/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
           }
-        },
+        }
+      }
+    },
+    "ng-cli-app-e2e": {
+      "projectType": "application",
+      "root": "apps/ng-cli-app-e2e",
+      "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "protractorConfig": "apps/ng-cli-app-e2e/protractor.conf.js",
             "devServerTarget": "ng-cli-app:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "ng-cli-app:serve:production"
             }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "apps/ng-cli-app-e2e/tsconfig.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

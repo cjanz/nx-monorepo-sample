@@ -1,0 +1,21 @@
+{
+  "npmScope": "ng-cli-app",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "ng-cli-app": {
+      "tags": []
+    },
+    "ng-cli-app-e2e": {
+      "tags": []
+    }
+  }
+}
