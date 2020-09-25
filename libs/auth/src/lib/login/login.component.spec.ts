@@ -30,9 +30,7 @@ describe('LoginComponent', () => {
         providers: [
           {
             provide: AuthService,
-            useValue: jasmine.createSpyObj<AuthService>('AuthService', [
-              'logout',
-            ]),
+            useValue: {},
           },
         ],
       }).compileComponents();

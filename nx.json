@@ -19,6 +19,9 @@
     },
     "shared-components": {
       "tags": []
+    },
+    "auth": {
+      "tags": []
     }
   }
 }

@@ -15,7 +15,8 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "@ng-cli-app/shared/components": ["libs/shared/components/src/index.ts"]
+      "@ng-cli-app/shared/components": ["libs/shared/components/src/index.ts"],
+      "@ng-cli-app/auth": ["libs/auth/src/index.ts"]
     },
     "rootDir": "."
   },

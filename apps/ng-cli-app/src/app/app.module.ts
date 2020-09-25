@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedComponentsModule } from '@ng-cli-app/shared/components';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from '@ng-cli-app/auth';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 
