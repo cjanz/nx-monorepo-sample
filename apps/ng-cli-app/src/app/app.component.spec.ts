@@ -3,6 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { SharedComponentsModule } from '@ng-cli-app/shared/components';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthService } from './auth/auth.service';
 
 describe('AppComponent', () => {
   beforeEach(
@@ -10,6 +11,12 @@ describe('AppComponent', () => {
       TestBed.configureTestingModule({
         imports: [RouterTestingModule, NoopAnimationsModule, SharedComponentsModule],
         declarations: [AppComponent],
+        providers: [
+          {
+            provide: AuthService,
+            useValue: {}
+          },
+        ],
       }).compileComponents();
     })
   );

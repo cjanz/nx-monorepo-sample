@@ -30,10 +30,7 @@
       </button>
       <span>Demo App</span>
       <span class="spacer"></span>
-      <ng-container *ngIf="user$ | async as user">
-        <span>{{ user.fullName }}</span>
-        <button mat-button (click)="logout()">Logout</button>
-      </ng-container>
+      <ng-content select="header"></ng-content>
     </mat-toolbar>
     <main><ng-content></ng-content></main>
   </mat-sidenav-content>
