@@ -13,7 +13,7 @@ export const routes: Routes = [
   {
     path: 'customers',
     loadChildren: () =>
-      import('./customers/customers.module').then((m) => m.CustomersModule),
+      import('@ng-cli-app/customers/ui').then((m) => m.CustomersUiModule),
     canActivate: [AuthGuard],
   },
 ];

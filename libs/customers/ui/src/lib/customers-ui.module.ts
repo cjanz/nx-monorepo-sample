@@ -19,4 +19,4 @@ import { MatSortModule } from '@angular/material/sort';
   ],
   exports: [CustomerListComponent],
 })
-export class CustomersModule {}
+export class CustomersUiModule {}

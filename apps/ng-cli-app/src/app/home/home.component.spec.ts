@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
-import { CustomerService } from '../customers/customer.service';
 import { EMPTY } from 'rxjs';
 import { SharedComponentsModule } from '@ng-cli-app/shared/components';
+import { CustomerService } from '@ng-cli-app/customers/ui';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
