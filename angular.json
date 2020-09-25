@@ -135,6 +135,36 @@
           }
         }
       }
+    },
+    "shared-components": {
+      "projectType": "library",
+      "root": "libs/shared/components",
+      "sourceRoot": "libs/shared/components/src",
+      "prefix": "app",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/components/tsconfig.lib.json",
+              "libs/shared/components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/components/**/*"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/components/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      },
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "defaultProject": "ng-cli-app"

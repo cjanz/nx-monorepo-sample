@@ -16,6 +16,9 @@
     },
     "ng-cli-app-e2e": {
       "tags": []
+    },
+    "shared-components": {
+      "tags": []
     }
   }
 }
